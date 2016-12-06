@@ -4,7 +4,9 @@ import { HomeComponent } from '../components/home/home.component';
 import { AboutComponent } from '../components/about/about.component';
 import { ContactComponent } from '../components/contact/contact.component';
 
-// Define the routes here
+// For clearity purpose will define
+// application route here and export
+// this object to rest of the app.
 export const appRoutes: Routes = [
     { 
         path: '',
