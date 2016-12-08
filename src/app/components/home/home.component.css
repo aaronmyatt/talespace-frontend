@@ -2,6 +2,22 @@ img {
   width: 100%;
 }
 
+
+/* Button */
+
+.btn-local {
+    background: #f58d1d;
+    border-radius: 0;
+    border-color: #f58d1d;
+}
+
+.btn-local:hover {
+    background: white;
+    color:#f58d1d;
+    border-color: #f58d1d;
+}
+
+/* Section One */
 .icon-wrapper {
     background: #f58d1d;
     padding-top: 17px;
@@ -13,6 +29,8 @@ img {
     margin: 0 auto;
 }
 
+
+/* Space Helpers*/
 .extra-top-space {
     margin-top: 50px;
 }
