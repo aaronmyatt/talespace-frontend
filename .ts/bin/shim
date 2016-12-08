@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-export NODE_PATH=/Users/lsp/dev/talespace-frontend/.ts/lib/node_modules
-export NPM_CONFIG_PREFIX=/Users/lsp/dev/talespace-frontend/.ts
-export npm_config_prefix=/Users/lsp/dev/talespace-frontend/.ts
-exec .ts/bin/node "$@"
