@@ -1,16 +1,28 @@
 <ngb-carousel>
-  <template ngbSlide>
-    <img src="../../../assets/images/slide1.jpg" alt="Random first slide">
-    <div class="carousel-caption">
-      <h3>Choose Your mission</h3>
-    </div>
-  </template>
-  <template ngbSlide>
-    <img src="../../../assets/images/slide2.jpg" alt="Random second slide">
-    <div class="carousel-caption">
-      <h3>Teach your story</h3>
-    </div>
-  </template>
+	<template ngbSlide id="carousel-inner">
+		<img src="../../../assets/images/slide1.jpg" alt="Random first slide">
+		<div class="carousel-caption">
+			<h3>Teach Your Story</h3>
+			<div>
+				<h3>Share your general knowledge experiences and skills</h3>
+			</div>
+			<div>
+				<button type="button" class="btn btn-large btn-local">Submit a mission on TaleSpace</button>
+			</div>
+		</div>
+	</template>
+	<template ngbSlide>
+		<img src="../../../assets/images/slide2.jpg" alt="Random second slide">
+		<div class="carousel-caption">
+			<h3>Choose Your mission</h3>
+			<div>
+				<h3>Pick from the many host missions we provide</h3>
+			</div>
+			<div>
+				<button type="button" class="btn btn-large btn-local">Join a mission and become A TaleMaster</button>
+			</div>
+		</div>
+	</template>
 </ngb-carousel>
 <div class="container extra-top-space">
 	<div class="row">

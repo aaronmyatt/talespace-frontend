@@ -1,3 +1,14 @@
 ul {
   list-style-type: none;
 }
+
+.card-title{
+    color: #f68e1e;
+    font-weight: 600;
+}
+
+.list-group-item h5 {
+    color: #f68e1e;
+    font-family: Open Sans;
+    font-weight: 600;
+}

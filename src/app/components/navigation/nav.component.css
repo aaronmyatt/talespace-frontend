@@ -5,6 +5,17 @@
 
 .navbar-brand>img {
     width: auto;
-  height: 40px;
+    height: 40px;
+}
+
+.navbar-light .navbar-nav>li>a {
+    color: black;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: bolder;
+}
+
+.navbar-light .navbar-nav>li>a:hover {
+    border-bottom: 2px solid white;
+    color: rgba(105, 77, 48, 0.64);
 }
 
