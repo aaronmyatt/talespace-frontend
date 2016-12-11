@@ -7,18 +7,4 @@
     width: auto;
   height: 40px;
 }
-<<<<<<< ded55e7cfdc10b88609766e263f122861b6bb1ed
-=======
 
-.navbar-default .navbar-nav>li>a {
-    color: black;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: bolder;
-    padding-bottom: 23px;
-}
-
-.navbar-default .navbar-nav>li>a:hover {
-    border-bottom: 2px solid white;
-    color: rgba(105, 77, 48, 0.64);
-}
->>>>>>> carousel design
