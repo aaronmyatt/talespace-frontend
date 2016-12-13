@@ -1,9 +1,39 @@
+.carousel {
+    height: 584px;
+}
+/*  
+    This is for overriding the ng-bootstrap carousel component css.
+    Angular encapsulates the css from bleeding in and out, so in order to 
+    override the css of a component inside another component, we use this 
+    and it's siblings like "/deep/" or "::shadow"
+*/
+:host >>> .carousel-inner {
+    height: 100%;
+}
+
+.carousel-caption {
+    top: 20%;
+}
+
+.carousel-caption h1{
+    background:rgba(0, 0, 0, 0.57);
+    margin-bottom: 0;
+}
+
+.sub-title {
+    background: #f58d1d;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
 /* Button */
 
 .btn-local {
     background: #f58d1d;
+    color: white;
     border-radius: 0;
     border-color: #f58d1d;
+    outline: none;
 }
 
 .btn-local:hover {
