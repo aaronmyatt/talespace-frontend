@@ -1,0 +1,35 @@
+.footer-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: #34495e;
+    color: white;
+    height: 59px;
+    z-index: 1;
+}
+
+.copyright {
+    display: inline-block;
+    width: 50%;
+    margin-left: 20px;
+}
+
+.icons-wrapper {
+    display: inline-block;
+    width: 45%;
+}
+
+.icons {
+    display: inline-block;
+    width: 6%;
+    padding: 5px;
+    text-align: center;
+}
+
+.icons:hover {
+    background: #f58d1d;
+    color: black;
+}
+
