@@ -1,9 +1,55 @@
+.carousel {
+    height: 584px;
+    z-index: 0;
+}
+
+/*
+    Angular2 special selectors :host, >>> is use
+    to override another component's styles
+    if only if that compenent is using 
+    "Emulated" viewEncapsulation 
+*/
+
+:host >>> .carousel-inner {
+    height: 100%;
+}
+
+:host >>> .carousel-indicators li {
+    background: white;
+    width: 14px;
+    height: 14px;
+}
+
+:host >>> .carousel-indicators .active {
+    background-color: #f58d1d;
+    border: 1px solid #f58d1d;
+    width: 14px;
+    height: 14px;
+}
+
+.carousel-caption {
+    top: 20%;
+}
+
+.carousel-caption h1{
+    background:rgba(0, 0, 0, 0.57);
+    margin-bottom: 0;
+}
+
+.sub-title {
+    background: #f58d1d;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
 /* Button */
 
 .btn-local {
     background: #f58d1d;
+    color: white;
     border-radius: 0;
     border-color: #f58d1d;
+    outline: none;
 }
 
 .btn-local:hover {
@@ -15,7 +61,7 @@
 /* Section One */
 .icon-wrapper {
     background: #f58d1d;
-    padding-top: 17px;
+    padding-top: 26px;
     border-radius: 50%;
     width: 115px;
     height: 100px;
@@ -24,9 +70,31 @@
     margin: 0 auto;
 }
 
+.icon-wrapper:hover {
+    background: white;
+    border: 1px solid #f58d1d;
+    color: #f58d1d;
+}
 
-/* Space Helpers*/
-.extra-top-space {
-    margin-top: 50px;
+/* Section Two */
+.has-background {
+    background: #5cb85c;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.join-us-button {
+    background: #f58d1d;
+    border: 1px solid #f58d1d;
+    color: white;
+    width: 100%;
+}
+
+.join-us-button:hover {
+    background: rgb(222, 115, 0);
+}
+
+.heading {
+    color: #f58d1d;
 }
 

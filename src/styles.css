@@ -5,6 +5,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', san-serif;
+}
+
 .panel {
   margin-left: auto;
   margin-right: auto;
@@ -15,3 +19,23 @@ body {
   margin-right: auto;
 }
 
+/* Loader styles */
+.center-fix {
+    position: fixed;
+    top: 50%;
+    left: 48%;
+}
+
+
+/* Space Helpers*/
+.extra-top-space {
+    margin-top: 50px;
+}
+
+.extra-bottom-space {
+    margin-bottom: 20px;
+}
+
+.extra-small-padding {
+    padding: 5px;
+}

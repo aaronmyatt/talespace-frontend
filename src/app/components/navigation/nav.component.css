@@ -1,6 +1,14 @@
 .navbar {
   margin-bottom: 0;
   background: #f58d1d;
+  height: 70px;
+  padding: 14px;
+  border-radius: 0;
+  border: none;
+}
+
+.navbar-brand {
+    padding: 0;
 }
 
 .navbar-brand>img {
@@ -12,10 +20,13 @@
     color: black;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: bolder;
+    padding-top: 10px;
+    margin-left: 20px;
 }
 
 .navbar-light .navbar-nav>li>a:hover {
     border-bottom: 2px solid white;
     color: rgba(105, 77, 48, 0.64);
+    padding-bottom: 20px;
 }
 

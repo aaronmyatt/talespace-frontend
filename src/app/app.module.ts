@@ -14,6 +14,7 @@ import {ProfileComponent} from "./components/profile/profile.component";
 import {ListComponent} from "./components/list/list.component";
 import {GalleryComponent} from "./components/gallery/gallery.component";
 import {NavComponent} from "./components/navigation/nav.component";
+import {FooterComponent} from "./components/footer/footer.component";
 import {appRoutes} from "./routing/routes";
 
 
@@ -32,6 +33,7 @@ import {appRoutes} from "./routing/routes";
     ProfileComponent,
     ListComponent,
     GalleryComponent,
+    FooterComponent,
     NavComponent
   ],
   imports: [
