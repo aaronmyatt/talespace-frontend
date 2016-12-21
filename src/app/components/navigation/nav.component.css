@@ -19,14 +19,14 @@
 .navbar-light .navbar-nav>li>a {
     color: black;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: bolder;
+    font-weight: 400;
     padding-top: 10px;
     margin-left: 20px;
 }
 
 .navbar-light .navbar-nav>li>a:hover {
     border-bottom: 2px solid white;
-    color: rgba(105, 77, 48, 0.64);
+    color: white;
     padding-bottom: 20px;
 }
 
