@@ -6,8 +6,8 @@
 /*
     Angular2 special selectors :host, >>> is use
     to override another component's styles
-    if only if that compenent is using 
-    "Emulated" viewEncapsulation 
+    if only if that compenent is using
+    "Emulated" viewEncapsulation
 */
 
 :host >>> .carousel-inner {
@@ -25,6 +25,10 @@
     border: 1px solid #f58d1d;
     width: 14px;
     height: 14px;
+}
+
+img {
+  width: 100%;
 }
 
 .carousel-caption {
