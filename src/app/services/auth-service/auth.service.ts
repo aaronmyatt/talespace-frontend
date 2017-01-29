@@ -6,29 +6,43 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import { UserModel } from '../../components/auth/user.model';
+import { LoginModel } from '../../components/auth/login.model';
 
 
 @Injectable()
 export class AuthService {
-  // only for testing porpuse
-  private baseUrl = 'http://localhost:8000/rest-auth/registration/';
+  // only for testing purpose
+  private baseUrl = 'http://localhost:8000';
+  private registerUrl = this.baseUrl + '/auth/registration/';
+  private loginUrl = this.baseUrl + '/auth/login/';
 
   constructor(private http: Http) {}
 
   register(user: UserModel) {
-    let headers = new Headers({'Content-Type': 'application/json'});
-    let options = new RequestOptions({headers: headers});
+    const options = AuthService.buildOptions();
 
-    return this.http.post(this.baseUrl, user, options)
+    return this.http.post(this.registerUrl, user, options)
         .map( (res: Response) => res.json() )
-        .catch( this.handleError);
+        .catch( AuthService.handleError);
   }
 
-  private handleError (error: Response | any) {
+  login(loginDetails: LoginModel) {
+    const options = AuthService.buildOptions();
+
+    return this.http.post(this.loginUrl, loginDetails, options)
+      .map( (res: Response) => res.json() )
+      .catch( AuthService.handleError);
+  }
+
+  static buildOptions() {
+    let headers = new Headers({'Content-Type': 'application/json'});
+    return new RequestOptions({headers: headers});
+  }
+
+  static handleError (error: Response | any) {
     let err = [];
     if (error instanceof Response) {
-      const body = error.json() || '';
-      err = body;
+      err = error.json() || '';
     } else {
       err = error.message ? error.message : error.toString();
     }

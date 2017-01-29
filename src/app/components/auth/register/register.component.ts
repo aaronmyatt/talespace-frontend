@@ -12,14 +12,14 @@ export class RegistrationComponent implements OnInit {
     public errMsg: string;
     public showErrMsg: boolean;
 
-    constructor( private auth: AuthService) { }
+    constructor( private authService: AuthService) { }
     ngOnInit() {
         this.showErrMsg = false;
     }
 
     register (user: UserModel, isValid: boolean) {
         if (isValid) {
-            this.auth.register(user).subscribe(
+            this.authService.register(user).subscribe(
                 res => {
                     console.log(res);
                 },
