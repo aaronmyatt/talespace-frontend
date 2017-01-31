@@ -13,10 +13,10 @@ import { LoginModel } from '../../components/auth/login.model';
 export class AuthService {
   // only for testing purpose
   private baseUrl = 'http://localhost:8000';
-  private registerUrl = this.baseUrl + '/auth/registration/';
-  private loginUrl = this.baseUrl + '/auth/login/';
+  public registerUrl = this.baseUrl + '/auth/registration/';
+  public loginUrl = this.baseUrl + '/auth/login/';
 
-  constructor(private http: Http) {}
+  constructor(public http: Http) {}
 
   register(user: UserModel) {
     const options = AuthService.buildOptions();

@@ -7,9 +7,6 @@ import { RegistrationComponent } from '../components/auth/register/register.comp
 import { LoginComponent } from '../components/auth/login/login.component';
 
 
-// For clearity purpose will define
-// application route here and export
-// this object to rest of the app.
 export const appRoutes: Routes = [
     {
         path: '',
