@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { AuthService } from '../../../services/auth-service/auth.service';
 import { UserModel } from '../user.model';
 
@@ -12,7 +12,9 @@ export class RegistrationComponent implements OnInit {
     public errMsg: string;
     public showErrMsg: boolean;
 
-    constructor(private authService: AuthService) { }
+    constructor(
+        private router: Router,
+        private authService: AuthService) { }
     ngOnInit() {
         this.showErrMsg = false;
     }
@@ -23,6 +25,7 @@ export class RegistrationComponent implements OnInit {
             this.authService.register(user).subscribe(
                 res => {
                     console.log(res);
+                    this.router.navigate(['/profile'])
                 },
                 err => {
                     console.log(err);
