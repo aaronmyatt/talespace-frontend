@@ -12,18 +12,18 @@ export class RegistrationComponent implements OnInit {
     public errMsg: string;
     public showErrMsg: boolean;
 
-    constructor( private authService: AuthService) { }
+    constructor(private authService: AuthService) { }
     ngOnInit() {
         this.showErrMsg = false;
     }
 
-    register (user: UserModel, isValid: boolean) {
+    register(user: UserModel, isValid: boolean) {
+        if (user.user_type === true) { user.user_type = 'm' }
         if (isValid) {
             this.authService.register(user).subscribe(
                 res => {
                     console.log(res);
                 },
-
                 err => {
                     console.log(err);
                     this.showErrMsg = true;

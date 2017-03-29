@@ -11,40 +11,7 @@
 
             <form method="post" #regForm="ngForm" (ngSubmit)="register(regForm.value, regForm.valid)" novalidate>
                 <div class="row">
-                    <div class="col-md-6">
-
-                        <div class="form-group">
-                            <input
-                                type="text"
-                                #firstName="ngModel"
-                                class="form-control"
-                                [ngClass]="{'has-error':((regForm.submitted && !regForm.valid) && firstName.errors?.required)}"
-                                placeholder="First Name"
-                                name="first_name"
-                                required
-                                ngModel
-                                >
-                            <div class="text-danger error-text" *ngIf="firstName.errors?.required && firstName.touched || (regForm.submitted && firstName.errors?.required)">
-                                This field is required.
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <input
-                                type="text"
-                                #lastName="ngModel"
-                                class="form-control"
-                                placeholder="Last Name"
-                                name="last_name"
-                                [ngClass]="{'has-error':((regForm.submitted && !regForm.valid) && lastName.errors?.required)}"
-                                required
-                                ngModel
-                                >
-                            <div class="text-danger error-text" *ngIf="lastName.errors?.required && lastName.touched || (regForm.submitted && lastName.errors?.required)">
-                                This field is required.
-                            </div>
-                        </div>
-
+                    <div class="col-md-12">
                          <div class="form-group">
                             <input
                                 type="email"
@@ -54,31 +21,16 @@
                                 [ngClass]="{'has-error':((regForm.submitted && !regForm.valid) && email.errors?.required)}"
                                 name="email"
                                 required
-                                ngModel
-                                >
+                                ngModel>
                             <div class="text-danger error-text" *ngIf="email.errors?.required && email.touched || (regForm.submitted && email.errors?.required)">
                                 This field is required.
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+		</div>
 
-                        <div class="form-group">
-                            <input
-                                type="text"
-                                #userName="ngModel"
-                                class="form-control"
-                                placeholder="Username"
-                                [ngClass]="{'has-error':((regForm.submitted && !regForm.valid) && userName.errors?.required)}"
-                                name="username"
-                                required
-                                ngModel
-                                >
-                            <div class="text-danger error-text" *ngIf="userName.errors?.required && userName.touched || (regForm.submitted && userName.errors?.required)">
-                                This field is required.
-                            </div>
-                        </div>
-
+                <div class="row">
+                    <div class="col-md-12">
                         <div class="form-group">
                             <input
                                 type="password"
@@ -94,25 +46,46 @@
                                 This field is required.
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <input
-                                type="password"
-                                #password2="ngModel"
-                                class="form-control"
-                                placeholder="Confirm Password"
-                                [ngClass]="{'has-error':((regForm.submitted && !regForm.valid) && password2.errors?.required)}"
-                                name="password2"
-                                required
-                                ngModel
-                                >
-                            <div class="text-danger error-text" *ngIf="password2.errors?.required && password2.touched || (regForm.submitted && password2.errors?.required)">
-                                This field is required.
-                            </div>
-                        </div>
-
-                    </div>
+		    </div>
+		</div>
+		
+                <div class="row">
+		  <div class="col-md-12">
+		    <div class="form-group">
+                      <input
+                        type="password"
+                        #password2="ngModel"
+                        class="form-control"
+                        placeholder="Confirm Password"
+                        [ngClass]="{'has-error':((regForm.submitted && !regForm.valid) && password2.errors?.required)}"
+                        name="password2"
+                        required
+                        ngModel>
+                      <div class="text-danger error-text" *ngIf="password2.errors?.required && password2.touched || (regForm.submitted && password2.errors?.required)">
+                        This field is required.
+                      </div>
+		    </div>
+                  </div>
                 </div>
+
+		<div class="row">
+                  <div class="col-md-12">
+		    <div class="form-check form-check-inline">
+		      <label class="form-check-label">
+			<input class="form-check-input" type="checkbox"
+                               #user_type="ngModel"
+                               class=""
+                               [ngClass]="{'has-error':((regForm.submitted && !regForm.valid) && user_type.errors?.required)}"
+                               name="user_type"
+                               ngModel>
+			<span class="custom-control-description">Are you a Mission/Orgnisation?</span>
+		      </label>
+		      <div class="text-danger error-text" *ngIf="user_type.errors?.required && user_type.touched || (regForm.submitted && user_type.errors?.required)">
+                        This field is required.
+                      </div>
+		    </div>
+		  </div>
+		</div>
 
                 <button type="submit" class="btn btn-warning btn-block btn-lg">Signup</button>
             </form>
