@@ -4,6 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { RouterModule } from "@angular/router";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { AuthModule } from "./services/auth-service/auth.module";
 
 import { AppComponent } from "./components/app/app.component";
 import { HomeComponent } from "./components/home/home.component";
@@ -20,6 +21,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 
 import { appRoutes } from "./routing/routes";
 import { AuthService } from "./services/auth-service/auth.service";
+import { UserDetailsService } from "./services/user-details-service/user-details.service";
 
 
 @NgModule({
@@ -42,10 +44,12 @@ import { AuthService } from "./services/auth-service/auth.service";
         FormsModule,
         HttpModule,
         RouterModule.forRoot(appRoutes),
-        NgbModule
+        NgbModule,
+        AuthModule
     ],
     providers: [
-        AuthService
+        AuthService,
+        UserDetailsService
     ],
     bootstrap: [AppComponent]
 })
